@@ -153,6 +153,8 @@ app.get("/delete", (req, res) => {
 
 app.get("/search", (req, res) => {
   const { id } = req.query;
+  console.log(req);
+
   const data = fileAddress("./json/heroData.json");
   const fileSearch = data.find(item => item.id == id);
   console.log(fileSearch);
